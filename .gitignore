@@ -36,6 +36,7 @@ dist/
 *.docx
 *.pdf
 *.pptx
+generar_*.py
 README_informe.md
 proyecto-codigo/evidencias/
 

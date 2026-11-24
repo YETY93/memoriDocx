@@ -58,8 +58,6 @@ El proyecto cubre las cinco dimensiones de la rúbrica: identificación y análi
 │   ├── scripts/              pruebas funcionales y verificación
 │   ├── evidencias/           respuestas JSON y capturas de pantalla
 │   └── README.md             guía detallada de ejecución
-├── generar_informe_apa.py     genera el informe Word con formato APA 7
-├── generar_presentacion.py    genera la presentación PowerPoint
 ├── .env.example              plantilla de credenciales (sin valores reales)
 └── README.md                 este archivo
 ```
@@ -122,9 +120,9 @@ Genera evidencias de: consulta exitosa con tres modelos, pregunta sin respuesta,
 
 ## Entregables académicos
 
-El informe (APA 7ª edición) y la presentación se generan localmente con los scripts
-`generar_informe_apa.py` y `generar_presentacion.py`, a partir del código y las evidencias
-producidas por las pruebas. **Los documentos generados no se versionan en este repositorio.**
+El informe (APA 7ª edición) y la presentación se producen localmente a partir del código y
+las evidencias generadas por las pruebas. **Ni los documentos ni sus scripts generadores
+se versionan en este repositorio.**
 
 ---
 
