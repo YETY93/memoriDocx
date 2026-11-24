@@ -60,8 +60,6 @@ El proyecto cubre las cinco dimensiones de la rúbrica: identificación y análi
 │   └── README.md             guía detallada de ejecución
 ├── generar_informe_apa.py     genera el informe Word con formato APA 7
 ├── generar_presentacion.py    genera la presentación PowerPoint
-├── Informe_Proyecto_memoriDocx_APA7.docx / .pdf
-├── Presentacion_memoriDocx.pptx / .pdf
 ├── .env.example              plantilla de credenciales (sin valores reales)
 └── README.md                 este archivo
 ```
@@ -124,9 +122,9 @@ Genera evidencias de: consulta exitosa con tres modelos, pregunta sin respuesta,
 
 ## Entregables académicos
 
-- Informe individual en PDF (formato APA 7ª edición, adaptación colombiana), con índice autogenerado, 7 tablas y 5 figuras.
-- Presentación oral en PowerPoint de 18 diapositivas con gráficos, capturas y notas del orador.
-- Prototipo funcional con evidencias técnicas.
+El informe (APA 7ª edición) y la presentación se generan localmente con los scripts
+`generar_informe_apa.py` y `generar_presentacion.py`, a partir del código y las evidencias
+producidas por las pruebas. **Los documentos generados no se versionan en este repositorio.**
 
 ---
 
