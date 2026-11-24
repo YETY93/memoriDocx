@@ -1,0 +1,20 @@
+[
+  {
+    "id": 37,
+    "conversationId": 19,
+    "role": "USER",
+    "content": "tiempo de respuesta",
+    "model": null,
+    "sources": null,
+    "createdAt": "2026-11-23T23:08:24"
+  },
+  {
+    "id": 38,
+    "conversationId": 19,
+    "role": "ASSISTANT",
+    "content": "Según el contexto, ante dolor torácico, el tiempo de respuesta es de **cinco minutos** para notificar al médico de guardia (Página 1).",
+    "model": "MISTRAL",
+    "sources": "pagina 1 | Informe de analisis memoriDocx - documento de prueba El tiempo de observacion clinica para nivel 2 es de doce horas. La reevaluacion debe realizarse al finalizar el periodo de observacion. Ante dolor toracico, notificar al medico de guardia en cinco minutos.",
+    "createdAt": "2026-11-23T23:08:24"
+  }
+]

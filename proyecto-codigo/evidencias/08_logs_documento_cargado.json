@@ -1,0 +1,65 @@
+[
+  {
+    "id": 23,
+    "documentId": 5,
+    "step": "RECEIVED",
+    "status": "SUCCESS",
+    "attempt": 1,
+    "message": "Evento de nuevo documento recibido: Informe_Prueba.pdf",
+    "createdAt": "2026-11-23T23:08:17"
+  },
+  {
+    "id": 24,
+    "documentId": 5,
+    "step": "OCR",
+    "status": "START",
+    "attempt": 1,
+    "message": "Iniciando extracción de texto del PDF",
+    "createdAt": "2026-11-23T23:08:17"
+  },
+  {
+    "id": 25,
+    "documentId": 5,
+    "step": "OCR",
+    "status": "SUCCESS",
+    "attempt": 1,
+    "message": "Extracción completada: 1 páginas, 263 caracteres",
+    "createdAt": "2026-11-23T23:08:17"
+  },
+  {
+    "id": 26,
+    "documentId": 5,
+    "step": "VALIDATION",
+    "status": "SUCCESS",
+    "attempt": 1,
+    "message": "Texto validado: 263 caracteres",
+    "createdAt": "2026-11-23T23:08:18"
+  },
+  {
+    "id": 27,
+    "documentId": 5,
+    "step": "CHUNKING",
+    "status": "SUCCESS",
+    "attempt": 1,
+    "message": "1 fragmentos generados con solapamiento",
+    "createdAt": "2026-11-23T23:08:18"
+  },
+  {
+    "id": 28,
+    "documentId": 5,
+    "step": "INDEXING",
+    "status": "SUCCESS",
+    "attempt": 1,
+    "message": "1 fragmentos indexados con número de página",
+    "createdAt": "2026-11-23T23:08:18"
+  },
+  {
+    "id": 29,
+    "documentId": 5,
+    "step": "READY",
+    "status": "SUCCESS",
+    "attempt": 1,
+    "message": "Documento disponible para consulta",
+    "createdAt": "2026-11-23T23:08:18"
+  }
+]

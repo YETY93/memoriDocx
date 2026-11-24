@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "code": "MISTRAL",
+    "displayName": "Mistral AI",
+    "modelId": "mistral-large-latest",
+    "baseUrl": "https://api.mistral.ai/v1",
+    "enabled": true,
+    "active": true
+  },
+  {
+    "id": 2,
+    "code": "DEEPSEEK",
+    "displayName": "DeepSeek",
+    "modelId": "deepseek-chat",
+    "baseUrl": "https://api.deepseek.com/v1",
+    "enabled": true,
+    "active": false
+  },
+  {
+    "id": 3,
+    "code": "GLM",
+    "displayName": "Zhipu GLM",
+    "modelId": "glm-4",
+    "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+    "enabled": true,
+    "active": false
+  }
+]

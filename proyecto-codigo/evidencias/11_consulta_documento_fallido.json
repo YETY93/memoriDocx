@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-11-23T23:08:26.670984",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "El documento aún no está disponible para consulta. Estado: FAILED",
+  "path": "/api/chat/query"
+}

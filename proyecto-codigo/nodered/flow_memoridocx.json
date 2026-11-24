@@ -1,0 +1,110 @@
+[
+  {
+    "id": "tab_memoridocx",
+    "type": "tab",
+    "label": "memoriDocx - Procesamiento documental",
+    "disabled": false,
+    "info": "Flujo Low-code que orquesta la recepcion, extraccion, validacion, fragmentacion e indexacion de documentos PDF."
+  },
+  {
+    "id": "inject_nuevo",
+    "type": "inject",
+    "z": "tab_memoridocx",
+    "name": "Nuevo documento cargado",
+    "props": [{ "p": "payload" }],
+    "payload": "{\"documentId\":1,\"fileName\":\"Protocolo_Triaje_memoriDocx.pdf\"}",
+    "payloadType": "json",
+    "repeat": "",
+    "once": false,
+    "x": 170, "y": 100,
+    "wires": [["http_ocr"]]
+  },
+  {
+    "id": "http_ocr",
+    "type": "http request",
+    "z": "tab_memoridocx",
+    "name": "OCR - extraer texto",
+    "method": "POST",
+    "url": "http://localhost:8080/api/documents/1/ocr",
+    "ret": "obj",
+    "x": 400, "y": 100,
+    "wires": [["fn_validar"]]
+  },
+  {
+    "id": "fn_validar",
+    "type": "function",
+    "z": "tab_memoridocx",
+    "name": "Validar texto extraido",
+    "func": "const texto = msg.payload.texto || '';\nmsg.documentId = msg.payload.documentId;\nmsg.caracteres = texto.length;\nmsg.texto = texto;\nreturn msg;",
+    "outputs": 1,
+    "x": 620, "y": 100,
+    "wires": [["switch_validacion"]]
+  },
+  {
+    "id": "switch_validacion",
+    "type": "switch",
+    "z": "tab_memoridocx",
+    "name": "Texto suficiente?",
+    "property": "caracteres",
+    "rules": [
+      { "t": "gte", "v": "20", "vt": "num" },
+      { "t": "else" }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 830, "y": 100,
+    "wires": [["fn_fragmentar"], ["delay_reintento"]]
+  },
+  {
+    "id": "fn_fragmentar",
+    "type": "function",
+    "z": "tab_memoridocx",
+    "name": "Fragmentar con pagina",
+    "func": "const tamano = 900, solape = 120;\nconst fragmentos = [];\nfor (const pagina of msg.texto.paginas || []) {\n  let inicio = 0;\n  while (inicio < pagina.texto.length) {\n    const fin = Math.min(inicio + tamano, pagina.texto.length);\n    fragmentos.push({ pagina: pagina.numero, contenido: pagina.texto.slice(inicio, fin) });\n    if (fin >= pagina.texto.length) break;\n    inicio = Math.max(inicio + 1, fin - solape);\n  }\n}\nmsg.fragmentos = fragmentos;\nreturn msg;",
+    "outputs": 1,
+    "x": 1060, "y": 60,
+    "wires": [["http_indexar"]]
+  },
+  {
+    "id": "http_indexar",
+    "type": "http request",
+    "z": "tab_memoridocx",
+    "name": "Indexar fragmentos (Qdrant)",
+    "method": "POST",
+    "url": "http://localhost:8080/api/documents/1/index",
+    "ret": "obj",
+    "x": 1300, "y": 60,
+    "wires": [["change_estado"]]
+  },
+  {
+    "id": "change_estado",
+    "type": "change",
+    "z": "tab_memoridocx",
+    "name": "Estado = AVAILABLE",
+    "rules": [{ "t": "set", "p": "estado", "pt": "msg", "to": "AVAILABLE", "tot": "str" }],
+    "x": 1540, "y": 60,
+    "wires": [["debug_resultado"]]
+  },
+  {
+    "id": "delay_reintento",
+    "type": "delay",
+    "z": "tab_memoridocx",
+    "name": "Reintento con espera progresiva",
+    "pauseType": "delay",
+    "timeout": "1",
+    "timeoutUnits": "seconds",
+    "x": 1060, "y": 170,
+    "wires": [["http_ocr"]]
+  },
+  {
+    "id": "debug_resultado",
+    "type": "debug",
+    "z": "tab_memoridocx",
+    "name": "Registrar ejecucion",
+    "active": true,
+    "tosidebar": true,
+    "x": 1780, "y": 100,
+    "wires": []
+  }
+]

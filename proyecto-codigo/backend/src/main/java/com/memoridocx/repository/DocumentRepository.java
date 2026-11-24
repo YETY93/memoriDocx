@@ -1,0 +1,11 @@
+package com.memoridocx.repository;
+
+import com.memoridocx.entity.DocumentEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface DocumentRepository extends JpaRepository<DocumentEntity, Long> {
+
+    List<DocumentEntity> findAllByOrderByIdDesc();
+}

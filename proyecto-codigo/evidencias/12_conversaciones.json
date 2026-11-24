@@ -1,0 +1,97 @@
+[
+  {
+    "id": 19,
+    "title": "tiempo de respuesta",
+    "createdAt": "2026-11-23T23:08:24"
+  },
+  {
+    "id": 18,
+    "title": "Cual es el presupuesto anual del area clinica?",
+    "createdAt": "2026-11-23T23:08:16"
+  },
+  {
+    "id": 17,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T23:08:04"
+  },
+  {
+    "id": 16,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T23:08:04"
+  },
+  {
+    "id": 15,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T23:08:04"
+  },
+  {
+    "id": 14,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T23:07:47"
+  },
+  {
+    "id": 13,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T23:06:03"
+  },
+  {
+    "id": 12,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T22:58:39"
+  },
+  {
+    "id": 11,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T22:54:41"
+  },
+  {
+    "id": 10,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T22:52:03"
+  },
+  {
+    "id": 9,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T22:50:33"
+  },
+  {
+    "id": 8,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T22:46:28"
+  },
+  {
+    "id": 7,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T22:45:45"
+  },
+  {
+    "id": 6,
+    "title": "tiempo de respuesta",
+    "createdAt": "2026-11-23T22:30:31"
+  },
+  {
+    "id": 5,
+    "title": "Cual es el presupuesto anual del area clinica?",
+    "createdAt": "2026-11-23T22:30:30"
+  },
+  {
+    "id": 4,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T22:30:30"
+  },
+  {
+    "id": 3,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T22:30:30"
+  },
+  {
+    "id": 2,
+    "title": "Cual es el tiempo de respuesta en nivel 2?",
+    "createdAt": "2026-11-23T22:30:30"
+  },
+  {
+    "id": 1,
+    "title": "Consulta de informe de analisis de procesos",
+    "createdAt": "2026-11-10T03:30:00"
+  }
+]
